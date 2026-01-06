@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secury Wallet Token (SEC)</title>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #owner-actions {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        input {
+            padding: 8px;
+            margin: 5px;
+            width: 100%;
+            max-width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Secury Wallet Token (SEC)</h1>
+
+    <div>
+        <button id="connect-wallet">Connect Wallet</button>
+        <p>Connected Wallet: <span id="wallet-address">Not connected</span></p>
+    </div>
+
+    <div>
+        <h2>Token Info</h2>
+        <p>Name: <span id="token-name">-</span></p>
+        <p>Symbol: <span id="token-symbol">-</span></p>
+        <p>Total Supply: <span id="total-supply">-</span></p>
+        <p>Max TX Amount: <span id="max-tx-amount">-</span></p>
+        <p>Max Wallet Size: <span id="max-wallet-size">-</span></p>
+        <p>Your Balance: <span id="your-balance">-</span></p>
+    </div>
+
+    <div>
+        <h2>Transfer Tokens</h2>
+        <input type="text" id="transfer-recipient" placeholder="Recipient Address">
+        <input type="text" id="transfer-amount" placeholder="Amount">
+        <button id="transfer-button">Transfer</button>
+    </div>
+
+    <div id="owner-actions">
+        <h2>Owner Actions</h2>
+        <button id="enable-trading-button">Enable Trading</button>
+        <button id="manual-swap-button">Manual Swap</button>
+        <button id="create-lp-button">Create LP</button>
+    </div>
+
+    <script src="menu.js"></script>
+</body>
+</html>
